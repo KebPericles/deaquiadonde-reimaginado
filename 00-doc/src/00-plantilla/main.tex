@@ -1,0 +1,35 @@
+% !TeX root = ..\ejemplo.tex
+
+
+%%%%%%%% PREÁMBULO %%%%%%%%%%%%
+
+\title{Plantilla para prácticas de UPIITA}
+\usepackage{preambulo-plantilla}
+
+%%%%%%%% TERMINA PREÁMBULO %%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+\input{portada}
+%%%
+
+%%%%%%%%%%%%%%%%%%%% TERMINA PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\newpage
+
+%%  Compilacion segun parametros
+%% Idea de: https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
+
+\ifdefined\docRequerimientos
+  \import{10-requerimientos}{main}
+\else
+  \ifdefined\docEjemplo
+    \import{01-ejemplo}{main}
+  \fi
+\fi
+
+
+\end{document}
