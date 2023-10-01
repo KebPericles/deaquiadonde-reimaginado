@@ -1,9 +1,18 @@
 \documentclass[11pt]{article}
 
-\def\docRequerimientos{1}
-
-\newcommand{\docTitulo}{Documento de requerimientos}
-
+\usepackage[subpreambles=true]{standalone}
 \usepackage{import}
 
-\import{00-plantilla}{main}
+\usepackage{00-plantilla/preambulo-plantilla}
+
+%% Titulo del documento
+\newcommand{\docTitulo}{Documento de requerimientos}
+
+
+\begin{document}
+
+\import{00-plantilla}{main.tex}
+
+\import{10-requerimientos}{main.tex}
+
+\end{document}

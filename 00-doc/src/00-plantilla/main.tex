@@ -1,10 +1,12 @@
 % !TeX root = ..\ejemplo.tex
-
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import}
 
 %%%%%%%% PREÁMBULO %%%%%%%%%%%%
 
 \title{Plantilla para prácticas de UPIITA}
-\usepackage{preambulo-plantilla}
+\usepackage{00-plantilla/preambulo-plantilla}
 
 %%%%%%%% TERMINA PREÁMBULO %%%%%%%%%%%%
 
@@ -12,24 +14,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
-\input{portada}
+\subimport{}{portada}
 %%%
 
 %%%%%%%%%%%%%%%%%%%% TERMINA PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \tableofcontents
 \newpage
-
-%%  Compilacion segun parametros
-%% Idea de: https://tex.stackexchange.com/questions/1492/passing-parameters-to-a-document
-
-\ifdefined\docRequerimientos
-  \import{10-requerimientos}{main}
-\else
-  \ifdefined\docEjemplo
-    \import{01-ejemplo}{main}
-  \fi
-\fi
 
 
 \end{document}
