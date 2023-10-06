@@ -1,6 +1,31 @@
 \section{Descripción general}
+% En esta secci´on se describen todos aquellos factores que afectan al producto y a sus requisitos. No se describen los requisitos, sino su contexto. Esto permitir´a definir con detalle los requisitos en la secci´on 3, haciendo que sean m´as f´aciles de entender.
+% Normalmente, esta secci´on consta de las siguientes subsecciones: Perspectiva del producto, funciones del producto, caracter´ısticas de los usuarios, restricciones, factores que se asumen y futuros requisito
+
 \subsection{Perspectiva del producto}
-% TODO
+% TODO Esta subseccion debe relacionar el futuro sistema (producto software) con otros productos. Si el producto es totalemente independiente de otros productos, tambien debe especificarse aquı. Si la ERS define un producto que es parte de un sistema mayor, esta subseccion relacionara los requisitos del sistema mayor con la funcionalidad del producto descrito en la ERS, y se identificaran las interfaces entre el producto mayor y el producto aquı descrito. Se recomienda utilizar diagramas de bloques
+
+*Descripción del Producto*:
+
+El producto software "DAAD" es una aplicación web independiente y autónoma diseñada para ofrecer servicios de gestión de horarios y ubicaciones para estudiantes y administradores de la escuela UPIITA. Aunque el sistema es inicialmente independiente, en un futuro se podrá integrar con otros servicios clave, como el Sistema de Administración Escolar (SAES) de la universidad para la gestión de horarios y Google para facilitar la creación de cuentas para los usuarios.
+
+*Relación con Otros Productos*:
+
+1. **Independencia Total**:
+   - En su estado actual, "Reimaginado" es un producto completamente independiente y no está directamente vinculado a otros sistemas o productos. No requiere interacciones con aplicaciones o servicios externos para funcionar de manera efectiva.
+
+2. **Potencial Integración con SAES**:
+   - En el futuro, se considerará la integración con el SAES de la universidad. Esta integración permitirá la importación automática de datos de horarios y clases desde SAES a "Reimaginado", mejorando la precisión y la coherencia de la información del horario de clases para los usuarios. La integración se realizará mediante interfaces de API y otros protocolos estándar para garantizar la compatibilidad y la transferencia segura de datos.
+   
+   Integración con Google:
+   
+   "Reimaginado" permitirá a los usuarios crear cuentas utilizando sus credenciales de Google, simplificando el proceso de registro. La integración con Google se realizará a través de las API de Google para la autenticación de usuarios y la creación segura de cuentas.
+   
+*Interfaces entre Productos*:
+
+- **"Reimaginado" y SAES**:
+  - La interfaz entre "Reimaginado" y SAES se establecerá a través de una API (Interfaz de Programación de Aplicaciones) estándar. Esta API permitirá la transferencia segura y automatizada de datos, incluyendo detalles del horario de clases, entre los dos sistemas. La información importada desde SAES se utilizará para actualizar y mantener los horarios de clases en "Reimaginado", asegurando la coherencia de los datos entre los sistemas.
+
 
 \subsection{Funciones del producto}
 % TODO Funciones del producto a grandes rasgos
