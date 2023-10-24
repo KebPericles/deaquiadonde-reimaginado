@@ -3,67 +3,85 @@
 % Normalmente, esta secci´on consta de las siguientes subsecciones: Perspectiva del producto, funciones del producto, caracter´ısticas de los usuarios, restricciones, factores que se asumen y futuros requisito
 
 \subsection{Perspectiva del producto}
-% TODO Esta subseccion debe relacionar el futuro sistema (producto software) con otros productos. Si el producto es totalemente independiente de otros productos, tambien debe especificarse aquı. Si la ERS define un producto que es parte de un sistema mayor, esta subseccion relacionara los requisitos del sistema mayor con la funcionalidad del producto descrito en la ERS, y se identificaran las interfaces entre el producto mayor y el producto aquı descrito. Se recomienda utilizar diagramas de bloques
+% Esta subseccion debe relacionar el futuro sistema (producto software) con otros productos. Si el producto es totalemente independiente de otros productos, tambien debe especificarse aquı. Si la ERS define un producto que es parte de un sistema mayor, esta subseccion relacionara los requisitos del sistema mayor con la funcionalidad del producto descrito en la ERS, y se identificaran las interfaces entre el producto mayor y el producto aquı descrito. Se recomienda utilizar diagramas de bloques
 
-*Descripción del Producto*:
-
-El producto software "DAAD" es una aplicación web independiente y autónoma diseñada para ofrecer servicios de gestión de horarios y ubicaciones para estudiantes y administradores de la escuela UPIITA. Aunque el sistema es inicialmente independiente, en un futuro se podrá integrar con otros servicios clave, como el Sistema de Administración Escolar (SAES) de la universidad para la gestión de horarios y Google para facilitar la creación de cuentas para los usuarios.
-
-*Relación con Otros Productos*:
-
-1. **Independencia Total**:
-   - En su estado actual, "Reimaginado" es un producto completamente independiente y no está directamente vinculado a otros sistemas o productos. No requiere interacciones con aplicaciones o servicios externos para funcionar de manera efectiva.
-
-2. **Potencial Integración con SAES**:
-   - En el futuro, se considerará la integración con el SAES de la universidad. Esta integración permitirá la importación automática de datos de horarios y clases desde SAES a "Reimaginado", mejorando la precisión y la coherencia de la información del horario de clases para los usuarios. La integración se realizará mediante interfaces de API y otros protocolos estándar para garantizar la compatibilidad y la transferencia segura de datos.
-   
-   Integración con Google:
-   
-   "Reimaginado" permitirá a los usuarios crear cuentas utilizando sus credenciales de Google, simplificando el proceso de registro. La integración con Google se realizará a través de las API de Google para la autenticación de usuarios y la creación segura de cuentas.
-   
-*Interfaces entre Productos*:
-
-- **"Reimaginado" y SAES**:
-  - La interfaz entre "Reimaginado" y SAES se establecerá a través de una API (Interfaz de Programación de Aplicaciones) estándar. Esta API permitirá la transferencia segura y automatizada de datos, incluyendo detalles del horario de clases, entre los dos sistemas. La información importada desde SAES se utilizará para actualizar y mantener los horarios de clases en "Reimaginado", asegurando la coherencia de los datos entre los sistemas.
+En su estado actual, ``DAAD'' es un producto completamente independiente y no está directamente vinculado a otros sistemas o productos. No requiere interacciones con aplicaciones o servicios externos para funcionar de manera efectiva.
 
 
 \subsection{Funciones del producto}
 % TODO Funciones del producto a grandes rasgos
-Funcionalidades Incluidas:
 
 \begin{itemize}
-        \item Registro y autenticación de usuarios.
-        \item Visualización de horarios personales para usuarios registrados.
-        \item Gestión de información sobre edificios, incluyendo nombre, ubicación y asociación con salones y laboratorios.
 
-        \item Gestión de información sobre salones y laboratorios, incluyendo número, capacidad, tipo y disponibilidad en función de horarios preestablecidos.
+        \item {
+              \textbf{Registro de Usuarios:}
 
-        \item Gestión de información detallada sobre materias, incluyendo nombre de la materia, profesor asignado, grupos y horarios flexibles.
+              Los usuarios podrán registrarse proporcionando su dirección de correo electrónico y una contraseña.
+              }
 
-        \item Cálculo automático de horarios de clases basado en la información de materias ingresada por usuarios registrados.
+        \item {
+
+              \textbf{Inicio de Sesión Único:}
+
+              Se proporcionará un sistema de inicio de sesión único para todos los usuarios.
+              }
+
+        \item {
+              \textbf{Restablecimiento de Contraseñas:}
+
+              Los usuarios podrán restablecer sus contraseñas en caso de olvido.
+              }
+
+        \item {
+              \textbf{Guardar materias:}
+
+              Los usuarios podrán guardar materias en su perfil para tener un mejor control de sus horarios.
+              }
+
+        \item {
+              \textbf{Visualización de Horarios de Clases:}
+
+              Los usuarios podrán ver sus horarios de clases en una interfaz fácil de usar después de iniciar sesión.
+              El sistema calculará automáticamente y mostrará en qué salón se llevará a cabo cada clase.
+              }
+
+        \item {
+              \textbf{Gestión de Materias:}
+
+              Los administradores tendrán la capacidad de agregar, modificar y eliminar información sobre las materias, incluyendo nombre de la materia, profesor asignado, grupos y horarios flexibles.
+              }
+
+        \item {
+              \textbf{Gestión de Salones y Laboratorios:}
+
+              Los administradores podrán gestionar información sobre salones y laboratorios, incluyendo número, capacidad, tipo y disponibilidad en función de horarios preestablecidos.
+              }
+
 \end{itemize}
-
-
-Funcionalidades Excluidas:
-
-La importación automática de horarios desde el sistema SAES de la escuela (esto se considerará como una mejora futura).
-
 
 \subsection{Características de los usuarios}
 % TODO
 \begin{itemize}
-        \item Usuarios Comunes: Estudiantes de la universidad que deseen registrarse y utilizar la plataforma para acceder a información sobre sus horarios de clases.
+        \item Usuarios Comunes: Estudiantes de la universidad que deseen registrarse y utilizar la plataforma para acceder a información sobre los horarios de clase de los salones.
         \item Administradores: Personal autorizado de la universidad que gestionará la información sobre edificios, salones, laboratorios y materias.
 \end{itemize}
 
-\subsection{Restricciones}
-% TODO Limitaciones impuestas en los desarrolladores
+% \subsection{Restricciones}
+% Limitaciones impuestas en los desarrolladores
 
 \subsection{Suposiciones y dependencias}
 % TODO Suposiciones que si cambian pueden afectar a los requisitos
 Se asume que los datos proporcionados por los administradores y usuarios son precisos y actualizados.
 
+Se asume que los usuarios tienen acceso a un navegador web moderno y una conexión a Internet.
+
+Se asume que los administradores darán soporte continuamente a la plataforma.
+
 \subsection{Requisitos futuros}
-% TODO
-La integración con el sistema SAES está sujeta a futuras consideraciones y recursos disponibles.
-Amet ullamco ex ea non laboris id esse dolore quis commodo nostrud mollit fugiat tempor.
+% TODO Funcionalidades Excluidas:
+
+\begin{itemize}
+        \item La importación automática de horarios desde el sistema SAES de la escuela.
+        \item La integración con Google para la creación de cuentas de usuario.
+
+\end{itemize}
